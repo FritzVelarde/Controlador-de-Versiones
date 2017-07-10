@@ -12,8 +12,8 @@ int main()
 {
     cGraph<string,int> grafo6;
     cGraph<string,int> grafo1;
-cGraph<string,int> grafo2;
-cGraph<string,int> grafo3;
+    cGraph<string,int> grafo2;
+    cGraph<string,int> grafo3;
     cGraph<string,int> grafo4;
     cGraph<string,int> grafo5;
     cTree<string,int> arbol;
@@ -39,8 +39,22 @@ grafo6.insertNode("primer commit");
     grafo6.insertNode("cuarto commit");
     grafo6.insertNode("quinto commit");
     grafo6.insertNode("sexto commit");
-    
-    
+grafo2.insertEdge(1,"primer commit","segundo commit",0);
+grafo3.insertEdge(1,"primer commit","segundo commit",0);
+    grafo3.insertEdge(2,"segundo commit","tercer commit",0);
+grafo4.insertEdge(1,"primer commit","segundo commit",0);
+    grafo4.insertEdge(2,"segundo commit","tercer commit",0);
+    grafo4.insertEdge(3,"tercer commit","cuarto commit",0);
+grafo5.insertEdge(1,"primer commit","segundo commit",0);
+    grafo5.insertEdge(2,"segundo commit","tercer commit",0);
+    grafo5.insertEdge(3,"tercer commit","cuarto commit",0);
+    grafo5.insertEdge(4,"cuarto commit","quinto commit",0);
+grafo6.insertEdge(1,"primer commit","segundo commit",0);
+    grafo6.insertEdge(2,"segundo commit","tercer commit",0);
+    grafo6.insertEdge(3,"tercer commit","cuarto commit",0);
+    grafo6.insertEdge(4,"cuarto commit","quinto commit",0);
+    grafo6.insertEdge(5,"quinto commit","sexto commit",0);
+		
 	cout<<"------Tiempo1_nodos:"<<endl;
     for(int i=0; i<grafo1.mNodes.size();i++){
         cout<<grafo1.mNodes[i]->mData<<endl;
@@ -73,22 +87,6 @@ grafo6.insertNode("primer commit");
     for(int i=0; i<grafo6.mNodes.size();i++){
         cout<<grafo6.mNodes[i]->mData<<endl;
     }
-grafo2.insertEdge(1,"primer commit","segundo commit",0);
-grafo3.insertEdge(1,"primer commit","segundo commit",0);
-    grafo3.insertEdge(2,"segundo commit","tercer commit",0);
-grafo4.insertEdge(1,"primer commit","segundo commit",0);
-    grafo4.insertEdge(2,"segundo commit","tercer commit",0);
-    grafo4.insertEdge(3,"tercer commit","cuarto commit",0);
-grafo5.insertEdge(1,"primer commit","segundo commit",0);
-    grafo5.insertEdge(2,"segundo commit","tercer commit",0);
-    grafo5.insertEdge(3,"tercer commit","cuarto commit",0);
-    grafo5.insertEdge(4,"cuarto commit","quinto commit",0);
-grafo6.insertEdge(1,"primer commit","segundo commit",0);
-    grafo6.insertEdge(2,"segundo commit","tercer commit",0);
-    grafo6.insertEdge(3,"tercer commit","cuarto commit",0);
-    grafo6.insertEdge(4,"cuarto commit","quinto commit",0);
-    grafo6.insertEdge(5,"quinto commit","sexto commit",0);
-	
 
 	for(int i=30010; i<grafo1.mNodes.size()+30010;i++){
 		grafo1.mNodes[i-30010]->dia=i;
